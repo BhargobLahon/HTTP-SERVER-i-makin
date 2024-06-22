@@ -13,7 +13,7 @@ const server = net.createServer((socket) => {
   });
 
   socket.on('data',(data) => {
-    const request = data.toString;
+    const request = data.toString();
     if(request.startsWith('GET /') ){
       socket.write('HTTP/1.1 200 OK\r\n\r\n');
     }else{
